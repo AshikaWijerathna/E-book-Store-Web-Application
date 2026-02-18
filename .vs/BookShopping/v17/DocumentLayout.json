@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\MVC Core\\BookShopping\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\repositories\\homerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\repositories\\homerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\views\\book\\updatebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\views\\book\\updatebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\views\\book\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\views\\book\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\views\\book\\addbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\views\\book\\addbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|e:\\mvc core\\bookshopping\\bookshoppingweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC279ABC-6F73-4FAC-8C76-08860BF75CF4}|BookShoppingWeb\\BookShoppingWeb.csproj|solutionrelative:bookshoppingweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\appsettings.json",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\appsettings.json",
+              "RelativeToolTip": "BookShoppingWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-18T10:50:50.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".gitignore",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\.gitignore",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\.gitignore",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\.gitignore",
+              "RelativeToolTip": "BookShoppingWeb\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-18T09:46:43.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BookShoppingWeb\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T09:23:30.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateBook.cshtml",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\UpdateBook.cshtml",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Views\\Book\\UpdateBook.cshtml",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\UpdateBook.cshtml",
+              "RelativeToolTip": "BookShoppingWeb\\Views\\Book\\UpdateBook.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T09:23:24.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Views\\Book\\Edit.cshtml",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\Edit.cshtml",
+              "RelativeToolTip": "BookShoppingWeb\\Views\\Book\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T09:23:15.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddBook.cshtml",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\AddBook.cshtml",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Views\\Book\\AddBook.cshtml",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\AddBook.cshtml",
+              "RelativeToolTip": "BookShoppingWeb\\Views\\Book\\AddBook.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T09:23:02.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Book.cs",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Models\\Book.cs",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Models\\Book.cs",
+              "RelativeToolTip": "BookShoppingWeb\\Models\\Book.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvx4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:21:24.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeRepository.cs",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Repositories\\HomeRepository.cs",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Repositories\\HomeRepository.cs",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Repositories\\HomeRepository.cs",
+              "RelativeToolTip": "BookShoppingWeb\\Repositories\\HomeRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:20:52.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BookShoppingWeb\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:20:27.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\Index.cshtml",
+              "RelativeDocumentMoniker": "BookShoppingWeb\\Views\\Book\\Index.cshtml",
+              "ToolTip": "E:\\MVC Core\\BookShopping\\BookShoppingWeb\\Views\\Book\\Index.cshtml",
+              "RelativeToolTip": "BookShoppingWeb\\Views\\Book\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-17T09:18:44.109Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

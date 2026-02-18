@@ -1,0 +1,129 @@
+﻿@page
+@model BookShoppingWeb.Views.Cart.PaymentSuccessModel
+@{
+}
+<style>
+    body {
+        background: #f4f7fb;
+    }
+
+    .success-container {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-success {
+        background: white;
+        padding: 45px 35px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        animation: fadeIn 0.8s ease-in-out;
+        width: 320px;
+    }
+
+    /* Checkmark circle */
+    .checkmark {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 5px solid #4CAF50;
+        margin: 0 auto 20px;
+        position: relative;
+        animation: pop 0.4s ease forwards;
+    }
+
+        /* Checkmark tick */
+        .checkmark::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 12px;
+            width: 25px;
+            height: 45px;
+            border-right: 5px solid #4CAF50;
+            border-bottom: 5px solid #4CAF50;
+            transform: rotate(45deg);
+            opacity: 0;
+            animation: draw 0.4s ease forwards 0.4s;
+        }
+
+    @@keyframes draw {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @@keyframes pop {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .success-title {
+        font-size: 26px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .success-text {
+        color: #777;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .btn-continue {
+        display: inline-block;
+        padding: 10px 28px;
+        border-radius: 25px;
+        background: #4CAF50;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+        .btn-continue:hover {
+            background: #43a047;
+            color: #fff;
+        }
+</style>
+
+
+<div class="success-container">
+    <div class="card-success">
+
+        <div class="checkmark"></div>
+
+        <div class="success-title">
+            Payment Successful!
+        </div>
+
+        <p class="success-text">
+            Thank you for your purchase.<br />
+            Your order has been placed successfully.
+        </p>
+
+        <a href="/" class="btn-continue">Continue Shopping</a>
+
+    </div>
+</div>

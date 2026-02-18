@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "OrderSuccess";
+}
+<style>
+    body{background:#f4f7fb}
+
+    .box{
+        height:80vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .card{
+        background:white;
+        padding:40px;
+        border-radius:16px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        width:340px;
+        animation:fadeIn .7s ease-in-out;
+    }
+    @@keyframes fadeIn{
+        flow-from{opacity:0;transform:translateY(15px);}
+        top{opacity:1;transform:translate(0);}
+    }
+    .icon{
+        font-size:60px;
+        color:#ff9800;
+        margin-bottom:15px;
+    }
+    .title{
+        font-size:24px;
+        font-weight:600;
+        margin-bottom:10px;
+    }
+    .text{
+        color:#666;
+        margin-bottom:25px;
+    }
+    .btn-home{
+        padding:10px 25px;
+        background:#ff9800;
+        color:white;
+        border-radius:25px;
+        text-decoration:none;
+    }
+    .btn-home:hover{
+        background:#f57c00;
+        color:white;
+    }
+</style>
+
+<div class="Box">
+    <div class="card">
+        <div class="icon">📦</div>
+        <div class="title">Order Placed Successfully!</div>
+        <div class="text">
+            Your order has been placed<br />
+            Please pay when the item is delivered.
+        </div>
+
+        <a href="/" class="btn-home">Continue Shopping</a>
+    </div>
+</div>

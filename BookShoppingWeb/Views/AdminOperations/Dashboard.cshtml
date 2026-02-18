@@ -1,0 +1,236 @@
+﻿@using BookShoppingWeb.Models
+@model DashboardStats
+@{
+    // ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card bg-success text-white shadow mb-3">
+            <div class="card-body text-center">
+                <h5>Total Sales</h5>
+                <h3>$@Model.TotalSales</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-primary text-white shadow mb-3">
+            <div class="card-body text-center">
+                <h5>Total Orders</h5>
+                <h3>@Model.TotalOrders</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-dark text-white shadow mb-3">
+            <div class="card-body text-center">
+                <h5>Paid Orders</h5>
+                <h3>@Model.PaidOrders</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark shadow mb-3">
+            <div class="card-body text-center">
+                <h5>COD Pending</h5>
+                <h3>@Model.PendingCOD</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card bg-info text-white shadow">
+            <div class="card-body text-center">
+                <h5>Books Sold</h5>
+                <h3>@Model.TotalBooksSold</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* Monthly, Today and Year Sales *@
+<div class="row mb-3 mt-3">
+    <div class="col-md-3">
+        <div class="card bg-info text-white shadow">
+            <div class="card-body text-center">
+                <h6>Today Sales</h6>
+                <h4>$@Model.TodaySales</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-secondary text-white shadow">
+            <div class="card-body text-center">
+                <h6>Monthly Sales</h6>
+                <h4>$@Model.MonthlySales</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-dark text-white shadow">
+            <div class="card-body text-center">
+                <h6>Yearly Sales</h6>
+                <h4>$@Model.YearlySales</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        @* Daily Sales Chart *@
+        <div class="col-md-4">
+            <div class="card p-3 shadow mt-4">
+                <h5>Daily Sales(Last 7 Days)</h5>
+                <canvas id="dailySalesChart"></canvas>
+            </div>
+        </div>
+        @* Monthly Revenue Chart *@
+        <div class="col-md-4">
+            <div class="card p-3 shadow mt-4">
+                <h5>Monthly Revenue</h5>
+                <canvas id="monthlySalesChart"></canvas>
+            </div>
+        </div>
+        @* Top Selling Books Chart *@
+        <div class="col-md-4">
+            <div class="card p-3 shadow mt-4">
+                <h5>Top Selling Books</h5>
+                <canvas id="topBooksChart"></canvas>
+            </div>
+        </div>
+        @* Best Selling Genre *@
+        <div class="col-md-4">
+            <div class="card p-3 shadow mt-4">
+                <h5>Best Selling Genres</h5>
+                <canvas id="genreChart"></canvas>
+            </div>
+        </div>
+        @* Customer Purchase trends *@
+        <div class="col-md-4">
+            <div class="card p-3 shadow mt-4">
+                <h5>Top Customers</h5>
+                <canvas id="customerChart"></canvas>
+            </div>
+        </div>
+    </div>
+    @if(ViewBag.LowStock != null &&  ViewBag.LowStock.Count > 0)
+    {
+        <div class="card mt-4 border-danger shadow">
+            <div class="card-header bg-danger text-white">
+                ⚠ Low Stock Alerts
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Book</th>
+                            <th>Remaining</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in ViewBag.LowStock)
+                        {
+                            <tr>
+                                <td>@item.BookName</td>
+                                <td>
+                                    <span class="fw-bold text-danger">@item.Quantity</span>
+                                </td>
+                                <td>
+                                    @if(item.Quantity == 0)
+                                    {
+                                        <span class="badge bg-dark">Out of Stock</span>
+                                    }
+                                    else if(item.Quantity <=2)
+                                    {
+                                        <span class=" badge bg-danger">Critical</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning text-dark">Low</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    const charts = @Html.Raw(Json.Serialize(ViewBag.Charts));
+    
+    //Daily Sales
+    new Chart(document.getElementById('dailySalesChart'),{
+        type:'line',
+        data:{
+            labels:charts.dailyLabels,
+            datasets:[{
+                label:"Sales",
+                data:charts.dailSales,
+                fill:false,
+                tension:0.3
+            }]
+        }
+    });
+    //Monthly Sales
+    new Chart(document.getElementById('monthlySalesChart'),{
+        type:'bar',
+        data:{
+            labels:charts.monthlyLabels,
+            datasets:[{
+                label:'Revenue',
+                data:charts.monthlySales
+            }]
+        }
+    });
+    //Top Books
+    new Chart(document.getElementById('topBooksChart'),{
+        type:'doughnut',
+        data:{
+            labels:charts.topBooks,
+            datasets:[{
+                data:charts.topBookSales
+            }]
+        }
+    });
+    //Best Selling Genres
+    new Chart(document.getElementById('genreChart'),{
+        type:'bar',
+        data:{
+            labels:charts.genreLabels,
+            datasets:[{
+                label:'Books Sold',
+                data:charts.genreSales
+            }]
+        }
+    });
+    //Customer Purchase Trends
+    new Chart(document.getElementById('customerChart'),{
+        type:'bar',
+        data:{
+            labels:charts.topCustomers,
+            datasets:[{
+                label:'Orders',
+                data:charts.customerOrders
+            }]
+        }
+    });
+</script>
+

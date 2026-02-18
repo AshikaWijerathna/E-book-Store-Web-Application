@@ -1,0 +1,153 @@
+﻿
+@* @model IEnumerable<Book> *@
+@model BookDisplayModel
+@{
+
+}
+<style>
+    .book-card{
+        overflow:hidden;
+        border-radius:12px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.8);
+        transition:transform .25s ease;
+        background:#fff;
+    }
+    .book-card:hover{
+        transform:translateY(-5px);
+    }
+    .book-img{
+        width:100%;
+        height:260px;
+        object-fit:cover;
+    }
+    .book-info{
+        background:#fff;
+    }
+    .price{
+        font-weight:600;
+        color:#0d6efd;
+    }
+    .book-overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:rgba(0,0,0,0.85);
+        color:white;
+        opacity:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:20px;
+        transition:opacity 0.3s ease;
+
+    }
+    .book-card:hover .book-overlay{
+        opacity:1;
+    }
+</style>
+<div class="my-2">
+    <form asp-action="Index" class="row row-cols-lg-auto g-3 align-items-center">
+        <div class="col-12">
+            <select class="form-select" id="genreId" name="genreId">
+                <option selected>All Genres</option>
+                @foreach(var genre in Model.Genres)
+                {
+                    <option selected="@(genre.Id == Model.GenreId)"value="@genre.Id">@genre.GenreName</option>
+                }
+                
+            </select>
+        </div>
+
+        <div class="col-12">
+            <input type="text" class="form-control" value="@Model.STerm" id="sterm" name="sterm" placeholder="Search by title">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="/Home/Index" class="btn btn-dark">Reset</a>
+        </div>
+    </form>
+</div>
+
+<!-- BOOK CARDS -->
+<div class="row mt-4 g-4">
+    @foreach(var book in Model.Books)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="book-card position-relative">
+                <!--Book Image-->
+                @if (string.IsNullOrEmpty(book.Image))
+                {
+                    <img src="/images/NoImage.png" class="book-img" alt="No image" />
+                }
+                else
+                {
+                    <img src="/images/@book.Image" class="book-img" alt="@book.BookName" />
+                }
+                <!--Book INFO-->
+                <div class="book-info p-2 text-center">
+                    <h6 class="mb-1">@book.BookName</h6>
+                    <p class="d-print-table-cell mb-1">$@book.Price</p>
+                    <small>@book.AuthorName</small>
+                </div>
+                <!--Hover Section-->
+                <div class="book-overlay">
+                    <div>
+                        <h6>@book.BookName</h6>
+
+                  @*   <p class="small text-light mb-2" style="font-size:0.85rem; line-height:1.4;">
+                        @(string.IsNullOrEmpty(book.Description)
+                                                ? "No description available"
+                                                : book.Description.Length > 150
+                                                ? book.Description.Substring(0, 150) + "..."
+                                                : book.Description)
+                    </p> *@
+                    <p class="text-light mb-2" style="font-size:0.82rem; line-height:1.45;">
+                        @(string.IsNullOrWhiteSpace(book.Description)
+                                                ? "No description available"
+                                                : book.Description.Length > 150
+                                                ? book.Description.Substring(0, 150) + "..."
+                                                : book.Description)
+                    </p>
+
+                        <p class="mb-2"><strong>@book.GenreName</strong></p>
+                        @if (book.Quantity > 0)
+                        {
+                            <a href="#" onclick="add(@book.Id)" class="btn btn-primary">Add Cart</a>
+                        }
+                        else
+                        {
+                            <button class="btn btn-outline-danger w-100" disabled>Out of Stock</button>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@section Scripts{
+    <script>
+        async function add(bookId){
+             var usernameEl = document.getElementById("username");
+             if(usernameEl==null){
+                 window.location.href="/Identity/Account/Login";
+             }
+            try{
+                var response = await fetch(`/Cart/AddItem?bookId=${bookId}`);
+                if(response.status==200){
+                    var result = await response.json();
+                    //console.log(result)
+                    var cartCountEl = document.getElementById("cartCount");
+                    cartCountEl.innerHTML=result;
+                    window.location.href="#cartCount";
+                }
+            }catch(err){
+                console.log(err);
+            }
+        }
+    </script>
+}
